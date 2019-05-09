@@ -114,6 +114,7 @@ int main()
 	cout << Zahlen[1] << endl;
 
 
+	// Bsp. von Alex, um zu sehen, wie weit stings weiter "springen"
 	//string test[7] = { "a" , "ab" , "abc" , "abcd" , "abcde" , "abcdef" , "abcdefg" };
 	//string* ptr_test = test;
 	//cout << *test << " " << *(test + 1) << " " << *(test + 2) << endl;
