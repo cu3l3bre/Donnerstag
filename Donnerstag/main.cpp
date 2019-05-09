@@ -78,6 +78,49 @@ int main()
 	// Speichern freigeben / Wieder zurückgeben an das Betriebssystem
 	delete ZeigerAufTag;
 
+	cout << endl;
+
+
+	// Adresse eines Arrays
+	// Array Zahlen ist oben definiert
+	
+	// das geht ist aber eigentlich nicht richtig
+	cout << "Adresse der Zahlenliste: " << &Zahlen << endl;
+
+	//besser und richtig ist das: also Zahlen ohne dem &-Operator
+	cout << "Adresse der Zahlenliste: " << Zahlen << endl;
+	
+	cout << "? " << Zahlen[0] << endl;
+
+	cout << "Erste Zahl: " << Zahlen[0] << endl;
+
+	cout << "??? " << *Zahlen << endl;
+
+
+	// Arrays sind technisch geehen Zeiger, deswegen funktioniert das hier so
+
+	int* ZeigerAufArray = Zahlen;
+
+	// So mag er das nicht, ist ja auch schon ne adresse
+	// int* ZeigerAufArray = &Zahlen;
+
+
+	// Rechnen mit Zeigern 
+	// hier werden die Bytes schon passed weiter gerechnet, also hier (4*9 Bytes)
+	cout << "Wert an der zehnten Stelle: " << *(ZeigerAufArray+9) << endl;
+
+	*(ZeigerAufArray + 1) = 100;
+	cout << *(ZeigerAufArray + 1) << endl;
+	cout << Zahlen[1] << endl;
+
+
+	//string test[7] = { "a" , "ab" , "abc" , "abcd" , "abcde" , "abcdef" , "abcdefg" };
+	//string* ptr_test = test;
+	//cout << *test << " " << *(test + 1) << " " << *(test + 2) << endl;
+	//cout << (int)test << " " << (int)(test + 1) << " " << (int)(test + 2) << endl;
+
+
+
 	system("pause");
 	return 0;
 }
