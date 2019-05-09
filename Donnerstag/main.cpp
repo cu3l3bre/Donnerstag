@@ -30,18 +30,42 @@ int main()
 	cout << Monate[1] << endl;
 	Monate[1] = "Karnevalsmonat :p";
 	cout << Monate[1] << endl;
-
-
 	cout << "Name des letzten Monats: " << Monate[11] << endl;
 
-
-
 	// Alle Monate anzeigen
-
 	for (int i = 0; i < 12; i++)
 	{
 		cout << "Der " << i+1 << ". Monat im Jahr heisst:\t" << Monate[i] << endl;
 	}
+	cout << endl;
+
+
+	// Nu kommt was anderes
+	cout << "*******************************************************************************************" << endl;
+	cout << endl;
+
+	
+	// Variable Jahr mit Inhalt 2019 wurde oeben bereits definiert
+
+	// Zeiger sind Variablen mit einem speziellen Datentyp "Zeiger auf ...."
+	// Der Wert eines Zeigers ist immer eine Speicheradresse
+	// wo sich die eigentliche Information befindet
+	int* ZeigerAufJahr = &Jahr;
+
+
+	cout << "Der Inhalt von Jahr ist:\t\t" << Jahr << endl;
+	cout << "Adresse der Variable Jahr:\t\t" << &Jahr << endl;
+	cout << "Wert der im Zeiger gespeichert ist:\t" << ZeigerAufJahr << endl;
+	cout << "Der Wert auf den der Zeiger zeigt:\t" << *ZeigerAufJahr << endl;
+	cout << "Adresse die der Zeiger hat:\t\t" << &ZeigerAufJahr << endl;
+
+	int** ZeigerAufZeiger = &ZeigerAufJahr;
+
+	cout << ZeigerAufZeiger << endl;	// Zeigt die Adresse des Zeigers ZeigerAufJahr
+	cout << *ZeigerAufZeiger << endl;	// Zeigt die Adresse von Jahr
+	cout << **ZeigerAufZeiger << endl;	// Zeigt den Wert von Jahr
+
+	
 
 
 	
