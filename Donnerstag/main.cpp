@@ -66,11 +66,18 @@ int main()
 	cout << **ZeigerAufZeiger << endl;	// Zeigt den Wert von Jahr
 
 	
+	// Variable auf dem Heap Anlegen
+	// Speicher reservieren und die Adresse in eine Zeigervariable speichern
+	int* ZeigerAufTag = new int;
 
+	// Zuweisen eines Wertes
+	*ZeigerAufTag = 9;
 
+	cout << "Tag " << *ZeigerAufTag << endl;
 	
-	
-	
+	// Speichern freigeben / Wieder zurückgeben an das Betriebssystem
+	delete ZeigerAufTag;
+
 	system("pause");
 	return 0;
 }
