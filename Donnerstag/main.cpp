@@ -33,6 +33,20 @@ int main()
 
 
 	cout << "Name des letzten Monats: " << Monate[11] << endl;
+
+
+
+	// Alle Monate anzeigen
+
+	for (int i = 0; i < 12; i++)
+	{
+		cout << "Der " << i+1 << ". Monat im Jahr heisst:\t" << Monate[i] << endl;
+	}
+
+
+	
+	
+	
 	system("pause");
 	return 0;
 }
